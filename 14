@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[10];
+    int i, k;
+    int Ig = 0;
+
+   
+    for (i = 0; i < 10; i++) {
+        printf("Digite o valor da posicao %d: ", i);
+        scanf("%d", &vetor[i]);
+    }
+
+   
+    for (i = 0; i < 10; i++) {
+        for (k = i + 1; k < 10; k++) {
+            if (vetor[i] == vetor[k]) {
+                printf("Valores iguais: %d e %d\n", vetor[i], vetor[k]);
+                Ig = 1;
+            }
+        }
+    }
+
+   
+    if (!Ig) {
+        printf("Nao existem valores iguais.\n");
+    }
+
+    return 0;
+}
