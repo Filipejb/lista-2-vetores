@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int vet[20];
+    int i, j, dupli;
+
+    
+    printf("Digite os valores:\n");
+    for (i = 0; i < 20; i++) {
+        scanf("%d", &vet[i]);
+    }
+
+    
+    for (i = 0; i < 20; i++) {
+        dupli = 0;
+        for (j = 0; j < i; j++) {
+            if (vet[i] == vet[j]) {
+                dupli = 1;
+                break;
+            }
+        }
+        if (dupli != 1) {
+            printf("%d ", vet[i]);
+        }
+    }
+
+    return 0;
+}
