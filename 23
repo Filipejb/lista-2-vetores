@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+
+int main(){
+    int vetA[5];
+    int vetB[5];
+    int prodEsc = 0;
+
+    for(int i = 0; i < 5; i++){
+        printf("Preecha o primeiro vetor :");
+        scanf("%d", &vetA[i]);
+    }
+    for(int i = 0; i < 5; i++){
+        printf("Preecha o segundo vetor :");
+        scanf("%d", &vetB[i]);
+    }
+   
+    for(int i = 0; i < 5; i++){
+        prodEsc += vetA[i] * vetB[i];
+    }
+    printf("Produto escalar: %d",prodEsc );
+    
+}
