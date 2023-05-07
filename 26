@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+
+
+int main(){
+    int vet[10];
+    int so =0;
+    double med =0, desPad =0;
+   int i;
+
+    for (int i = 0; i < 10; i++) {
+  printf("digite o %d numero:", i+1);
+    scanf("%d", &vet[i]);
+    }
+  for (int i = 0; i < 10; i++) {
+        so += vet[i];
+    }
+    
+    med = so / 10;
+    
+    for (int i = 0; i < 10; i++) {
+        desPad += pow(vet[i]- med, 2);
+    }
+    desPad = sqrt(desPad/(10 -1));
+
+    printf("Desvio padrão: %2.lf", desPad);
+
+ return 0;
+}
