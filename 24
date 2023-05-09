@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int alunobaixo = 0, alunoalto = 0;
+    float alturabaixa = 10.0, alturaalta = 0.0, alt;
+    int numaluno, i;
+
+    for (i = 1; i <= 3; i++) {
+        printf("Digite o numero do aluno %d: ", i);
+        scanf("%d", &numaluno);
+
+        printf("Digite a altura do aluno %d (em metros): ", i);
+        scanf("%f", &alt);
+
+        if (alt > alturaalta) {
+            alunoalto = numaluno;
+            alturaalta = alt;
+        }
+
+        if (alt < alturabaixa) {
+            alunobaixo = numaluno;
+            alturabaixa = alt;
+        }
+    }
+
+    printf("O aluno mais baixo eh o numero %d, com altura de %.2f metros\n", alunobaixo, alturabaixa);
+    printf("O aluno mais alto eh o numero %d, com altura de %.2f metros\n", alunoalto, alturaalta);
+
+    return 0;
+}
