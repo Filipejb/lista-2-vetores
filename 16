@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int vet[5];
+    int codi, i;
+
+    for (i = 0; i < 5; i++) {
+        printf("Digite o valor da posicao %d do vetor: ", i+1);
+        scanf("%d", &vet[i]);
+    }
+
+    printf("Digite o codigo (1 para ordem direta, 2 para ordem inversa, 0 para sair): ");
+    scanf("%d", &codi);
+
+    while (codi != 0) {
+        if (codi == 1) {
+            printf("\n Ordem direta:\n");
+            for (i = 0; i < 5; i++) {
+                printf("%d ", vet[i]);
+            }
+            printf("\n");
+        } else if (codi == 2) {
+            printf("\nOrdem inversa:\n");
+            for (i = 4; i >= 0; i--) {
+                printf("%d ", vet[i]);
+            }
+            printf("\n");
+        } else {
+            printf("\nCodigo invalido!\n");
+        }
+
+        printf("Digite o codigo (1 para ordem direta, 2 para ordem inversa, 0 para sair): ");
+        scanf("%d", &codi);
+    }
+
+    printf("\nFim!.\n");
+
+    return 0;
+}
